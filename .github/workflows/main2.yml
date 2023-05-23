@@ -1,0 +1,32 @@
+name: Build-Test-Deploy
+on: 
+  push: 
+    branches : ["main"]
+  workflow_dispatch:
+  
+jobs:
+
+build:
+    runs-on: ubuntu-latest
+     steps:
+      - uses: actions/checkout@v3
+      
+      - name: Greet User
+        run: echo welcome to Build
+test:
+    runs-on: ubuntu-latest
+     steps:
+      - uses: actions/checkout@v3
+      
+      - name: Greet User
+        run: echo welcome to test
+
+deploy:
+    runs-on: ubuntu-latest
+     steps:
+      - uses: actions/checkout@v3
+      
+      - name: Greet User
+        run: echo welcome to deploy
+
+   
